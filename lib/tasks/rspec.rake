@@ -1,4 +1,4 @@
-namespace :test do
+namespace :rspec do
   desc 'run fizz buzz tests'
   task :fizz_buzz, :environment do
     RSpec::Core::RakeTask.new(:fizz_buzz) do |t|
@@ -28,4 +28,4 @@ namespace :test do
 end
 
 desc 'run all tests'
-task test: ['test:all']
+task rspec: ['rspec:all']
