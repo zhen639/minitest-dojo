@@ -24,7 +24,7 @@ namespace :rspec do
   end
 
   desc 'run all tests'
-  task all: [:fizz_buzz, :auto_wrap]
+  task all: [:fizz_buzz, :auto_wrap, :numbers_to_words]
 end
 
 desc 'run all tests'
