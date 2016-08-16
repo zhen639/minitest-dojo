@@ -22,4 +22,10 @@ namespace :test do
     end
     Rake::Task[:numbers_to_words].execute
   end
+
+  desc 'run all minitests'
+  task all: [:fizz_buzz, :auto_wrap, :numbers_to_words]
 end
+
+desc 'run all minitests'
+task test: ['test:all']
