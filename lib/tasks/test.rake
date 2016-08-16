@@ -14,4 +14,12 @@ namespace :test do
     end
     Rake::Task[:auto_wrap].execute
   end
+
+  desc 'run numbers to words tests'
+  task :numbers_to_words, :environment do
+    Rake::TestTask.new(:numbers_to_words) do |t|
+      t.test_files = FileList['test/numbers_to_words/*_test.rb']
+    end
+    Rake::Task[:numbers_to_words].execute
+  end
 end
