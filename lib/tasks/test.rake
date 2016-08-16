@@ -15,6 +15,14 @@ namespace :test do
     Rake::Task[:auto_wrap].execute
   end
 
+  desc 'run numbers_to_words tests'
+  task :numbers_to_words, :environment do
+    RSpec::Core::RakeTask.new(:numbers_to_words) do |t|
+      t.pattern = 'spec/numbers_to_words/*_spec.rb'
+    end
+    Rake::Task[:numbers_to_words].execute
+  end
+
   desc 'run all tests'
   task all: [:fizz_buzz, :auto_wrap]
 end
